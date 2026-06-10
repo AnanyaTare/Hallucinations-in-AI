@@ -7,7 +7,7 @@ This project focuses on the detection, evaluation, and mitigation of hallucinati
 ## 📌 Project Overview
 - **Description:** Detect and reduce AI hallucinations to ensure safer, more factual, and reliable LLM outputs.
 - **Technology Stack:** Large Language Models (LLMs), Natural Language Processing (NLP), Evaluation Metrics
-- **Mentor:** AI Safety Lab
+- **Mentor:** Dr. Ritu Jain
 - **Duration:** 6 Weeks
 
 ---
