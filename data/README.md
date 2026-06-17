@@ -5,14 +5,21 @@ This folder is dedicated to storing datasets, prompts, generated outputs, and ev
 ## 📂  Folder Structure
 ```text
 data/
-├── raw/           # Original datasets (e.g., TruthfulQA, CoQA, or custom prompt datasets)
-├── processed/     # Cleaned data, tokenized samples, or structured inputs
-└── evaluation/    # Model outputs, annotated generations, and ground-truth comparison sets
+├── raw/
+│   ├── llm_hallucination_benchmark/  # Syed Ali Taqi's LLM Hallucination Benchmark Dataset (CSV/JSON)
+│   ├── rag_hallucination_reduction/  # RAG-Based Hallucination Reduction Dataset (CSV/JSON/Text)
+│   └── other_benchmarks/             # TruthfulQA, CoQA, or other raw downloads
+├── processed/                        # Cleaned data, standardized prompt-response pairs, or structured inputs
+└── evaluation/                       # Model outputs, annotated generations, and ground-truth comparison sets
 ```
 
 ## 📊 Expected Data Formats
 - **JSON/JSONL:** For prompt-response pairs, model outputs, and evaluation scores.
 - **CSV:** For metadata, statistics, and tabular benchmark results.
+
+## 📥 How to Add These Datasets
+1. **Raw Files:** Download the datasets from Kaggle/Hugging Face and place them into their respective subfolders under `data/raw/` (e.g., `data/raw/llm_hallucination_benchmark/`).
+2. **Ignored Files:** Since raw dataset files can be large, ensure they are added to `.gitignore` so they are not pushed to GitHub. Keep only a small representative sample file in the folders for reference.
 
 > [!NOTE]
 > Ensure all large datasets are ignored via `.gitignore` if they exceed Git's file size limit, and keep only representative samples in the repository.
