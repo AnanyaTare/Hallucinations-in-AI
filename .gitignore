@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+venv/
+.venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data (large files — keep only samples)
+data/raw/llm_hallucination_benchmark/*.csv
+data/raw/rag_hallucination_reduction/*.csv
+data/raw/other_benchmarks/
+
+# Database
+*.db
+*.sqlite3
+
+# Vector Store
+data/processed/chroma_db/
+
+# Logs
+logs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Docker
+.dockerignore

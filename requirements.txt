@@ -1,0 +1,57 @@
+# ════════════════════════════════════════════════════════
+# Hallucinations-in-AI — Backend Requirements
+# ════════════════════════════════════════════════════════
+
+# ── Core ──────────────────────────────────────────────
+python-dotenv
+loguru
+pydantic
+pydantic-settings
+
+# ── FastAPI / Server ───────────────────────────────────
+fastapi
+uvicorn[standard]
+httpx          # async HTTP client used internally
+
+# ── Database ───────────────────────────────────────────
+sqlalchemy
+
+# ── LLMs ──────────────────────────────────────────────
+openai
+google-generativeai
+litellm
+transformers
+torch>=2.6.0            # Version bumped to support current Python
+
+# ── NLP / Evaluation ──────────────────────────────────
+sentence-transformers
+evaluate
+bert-score
+nltk
+
+# ── RAG ───────────────────────────────────────────────
+langchain
+langchain-openai
+chromadb
+faiss-cpu>=1.9.0
+
+# ── Data ──────────────────────────────────────────────
+pandas
+datasets
+jsonlines
+
+# ── Visualization ─────────────────────────────────────
+matplotlib
+seaborn
+plotly
+
+# ── Streamlit Demo ────────────────────────────────────
+streamlit
+
+# ── Dev & Testing ─────────────────────────────────────
+pytest
+pytest-asyncio
+httpx
+black
+ruff
+pre-commit

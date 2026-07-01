@@ -18,9 +18,13 @@ class MitigationTechniqueEnum(str, Enum):
 
 
 class ModelEnum(str, Enum):
+    LLAMA3_8B = "groq/llama-3.1-8b-instant"
+    LLAMA3_70B = "groq/llama-3.3-70b-versatile"
+    GEMMA2 = "groq/gemma2-9b-it"
+    GEMINI_FLASH = "gemini/gemini-2.0-flash"
+    GEMINI_PRO = "gemini/gemini-1.5-pro-latest"
     GPT4O = "gpt-4o"
     GPT35 = "gpt-3.5-turbo"
-    GEMINI = "gemini/gemini-1.5-pro"
     MISTRAL = "mistral/mistral-7b-instruct"
 
 

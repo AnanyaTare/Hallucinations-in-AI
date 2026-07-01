@@ -36,7 +36,7 @@ st.markdown("""
 # ── Helpers ───────────────────────────────────────────────────────────────────
 def call_api(endpoint: str, payload: dict) -> dict | None:
     try:
-        response = httpx.post(f"{API_BASE}{endpoint}", json=payload, timeout=60.0)
+        response = httpx.post(f"{API_BASE}{endpoint}", json=payload, timeout=300.0)  # 5 min for slow first-run ML model loading
         response.raise_for_status()
         return response.json()
     except httpx.ConnectError:
@@ -60,12 +60,13 @@ with st.sidebar:
     st.title("⚙️ Settings")
 
     model = st.selectbox("LLM Model", [
-        "gpt-4o", "gpt-3.5-turbo", "gemini/gemini-1.5-pro", "mistral/mistral-7b-instruct"
+        "groq/llama-3.1-8b-instant", "groq/llama-3.3-70b-versatile", "groq/gemma2-9b-it",
+        "gemini/gemini-2.0-flash", "gpt-4o", "gpt-3.5-turbo"
     ])
     mitigation = st.selectbox("Mitigation Technique", [
         "none", "few_shot", "chain_of_thought", "rag", "self_consistency"
     ])
-    evaluate_hallucination = st.toggle("Evaluate for Hallucinations", value=True)
+    evaluate_hallucination = st.toggle("Evaluate for Hallucinations", value=False)
 
     st.divider()
     st.subheader("🏥 API Health")
