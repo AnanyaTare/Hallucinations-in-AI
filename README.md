@@ -85,4 +85,6 @@ Hallucinations-in-AI/
     └── README.md
 ```
 
-For more details on each directory, please refer to the respective `README.md` files inside them.
+Video Demo Link:
+https://canva.link/zcj30bukl0e9s53
+

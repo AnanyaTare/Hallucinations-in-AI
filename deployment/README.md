@@ -10,5 +10,3 @@ deployment/
 └── docker/         # Dockerfiles and docker-compose files for local deployment
 ```
 
-## 🚀 Deployment Instructions
-Once developed, instructions for launching the API or web demo will be documented here.
