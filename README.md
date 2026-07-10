@@ -87,4 +87,9 @@ Hallucinations-in-AI/
 
 Video Demo Link:
 https://canva.link/zcj30bukl0e9s53
+## 🎥 Video Demo
+
+Click the link below to watch the project demo:
+
+[▶️ Watch the Demo Video](VID-20260710-WA0013.mp4)
 
