@@ -16,6 +16,7 @@ from deployment.api.models.schemas import ChatRequest, ChatResponse
 from deployment.api.services.llm_service import call_llm
 from deployment.api.services.evaluation_service import evaluate_response
 from deployment.api.services.mitigation_service import get_rag_context
+from src.history.conversation_history import add_to_history
 
 router = APIRouter(prefix="/api/chat", tags=["Chat"])
 
@@ -127,6 +128,16 @@ async def chat(request: ChatRequest, db: Session = Depends(get_db)):
     session.updated_at = datetime.now(timezone.utc)
     db.commit()
     db.refresh(assistant_msg)
+
+    # ── 7. Save to in-memory conversation history module ─────────────────────
+    add_to_history(
+        question=request.prompt,
+        answer=ai_response,
+        session_id=session.id,
+        model=request.model.value,
+        is_hallucinated=bool(scores.get("is_hallucinated", False)),
+        hallucination_score=float(scores.get("hallucination_score", 0.0)),
+    )
 
     logger.success(
         f"Chat turn saved | session={session.id} | "
