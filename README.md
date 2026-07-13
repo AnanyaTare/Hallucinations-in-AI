@@ -85,8 +85,7 @@ Hallucinations-in-AI/
     └── README.md
 ```
 
-Video Demo Link:
-https://canva.link/zcj30bukl0e9s53
+
 ## 🎥 Video Demo
 
 Click the link below to watch the project demo:
